@@ -1,18 +1,18 @@
-require_relative './lib/icqbot.rb'
+require_relative './lib/vkteamsbot.rb'
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
-  s.name          = "icqbot"
-  s.version       = ICQ::VERSION
-  s.authors       = ["sheyber"]
-  s.email         = ["ukt1@ro.ru"]
+  s.name          = "vkteambot"
+  s.version       = VKTeams::VERSION
+  s.authors       = ["akkrat"]
+  s.email         = ["akkrat.public@outlook.com"]
   s.license       = '0BSD'
 
-  s.summary       = %q{Ruby wrapper for ICQ Bot API.}
-  s.description   = %q{This gem is a simple and minimalistic library for creating ICQ bots.}
-  s.homepage      = "https://github.com/sheyber/icqbot"
+  s.summary       = %q{Ruby wrapper for VK Teams Bot API.}
+  s.description   = %q{This gem is a simple and minimalistic library for creating VK Teams bots.}
+  s.homepage      = "https://github.com/akkrat/vkteamsbot"
   s.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   s.metadata["homepage_uri"] = s.homepage

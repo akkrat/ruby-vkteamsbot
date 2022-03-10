@@ -1,6 +1,6 @@
 require_relative '../../../bot.rb'
 
-module ICQ
+module VKTeams
 
   class Bot
     def block_user user_id, chat_id, del_last_msg=false

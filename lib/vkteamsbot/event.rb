@@ -1,6 +1,6 @@
-require_relative '../icqbot.rb'
+require_relative '../vkteamsbot.rb'
 
-module ICQ
+module VKTeams
 
   BOT_PREFIX = '/'
 
@@ -20,7 +20,7 @@ module ICQ
       @event_h = event_h
       @type = event_h['type']
       @from = event_h['payload']['from']
-      if @type != ICQ::TypeEvent::CALLBACK
+      if @type != VKTeams::TypeEvent::CALLBACK
         @text = event_h['payload']['text']
         @msg_id = event_h['payload']['msgId']
         @chat_id = event_h['payload']['chat']['chatId']
@@ -32,7 +32,7 @@ module ICQ
     end
 
     def prefix?
-      @text[0] == ICQ::BOT_PREFIX if @text
+      @text[0] == VKTeams::BOT_PREFIX if @text
     end
 
     def to_h; @event_h end

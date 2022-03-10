@@ -1,6 +1,6 @@
 require 'json'
 
-require_relative '../icqbot.rb'
+require_relative '../vkteamsbot.rb'
 require_relative './urls_api.rb'
 
 require_relative './functional/send_msg.rb'
@@ -15,7 +15,7 @@ require_relative './functional/chats/administration/set_rules.rb'
 require_relative './functional/chats/administration/pin_unpin_msg.rb'
 require_relative './functional/chats/administration/block_unblock_user.rb'
 
-module ICQ
+module VKTeams
 
   class Bot
     attr_accessor :loop
@@ -45,10 +45,10 @@ module ICQ
         if events and events['events'] and events['events'] != []
           last_event = events['events'].last
           @last_event_id = last_event['eventId']
-          last_event = ICQ::Event.new last_event
+          last_event = VKTeams::Event.new last_event
           if @handlers.has_key? last_event.text
             @handlers[last_event.text].call last_event
-          elsif last_event.type == ICQ::TypeEvent::CALLBACK and @callback_handlers.has_key? last_event.data 
+          elsif last_event.type == VKTeams::TypeEvent::CALLBACK and @callback_handlers.has_key? last_event.data 
             @callback_handlers[last_event.text].call last_event
           else
             yield last_event

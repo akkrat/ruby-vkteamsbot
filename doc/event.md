@@ -2,7 +2,7 @@
 Event
 ---
 
-File: `lib/icqbot/event.rb`
+File: `lib/vkteamsbot/event.rb`
 
 ---
 Класс для представления событий.
@@ -11,7 +11,7 @@ File: `lib/icqbot/event.rb`
 ```ruby
 def initialize event_h
 ```
-Принимает hash event из ICQ Bot API.
+Принимает hash event из VK Teams Bot API.
 
 ## Аттрибуты
 ```ruby

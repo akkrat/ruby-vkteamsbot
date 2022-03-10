@@ -1,6 +1,6 @@
 require_relative '../../bot.rb'
 
-module ICQ
+module VKTeams
 
   class Bot
     def get_members chat_id, cursor=nil

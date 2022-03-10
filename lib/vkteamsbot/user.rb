@@ -1,6 +1,6 @@
-require_relative '../icqbot.rb'
+require_relative '../vkteamsbot.rb'
 
-module ICQ
+module VKTeams
 
   class User
     attr_reader :first_name, :last_name, :photo, :type

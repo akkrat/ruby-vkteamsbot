@@ -2,7 +2,7 @@
 Bot
 ---
 
-File: `lib/icqbot/bot.rb`
+File: `lib/vkteamsbot/bot.rb`
 
 ---
 

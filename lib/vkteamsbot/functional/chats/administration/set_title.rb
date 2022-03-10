@@ -1,6 +1,6 @@
 require_relative '../../../bot.rb'
 
-module ICQ
+module VKTeams
 
   class Bot
     def set_title chat_id, title

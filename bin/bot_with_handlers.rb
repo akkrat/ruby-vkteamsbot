@@ -1,6 +1,6 @@
-require 'icqbot'
+require 'vkteamsbot'
 
-bot = ICQ::Bot.new('TOKEN')
+bot = VKTeams::Bot.new('TOKEN')
 
 bot.add_handler '/help', -> (event) do
   bot.send_msg 'command help don\'t work', event.chat_id

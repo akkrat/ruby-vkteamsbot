@@ -1,21 +1,21 @@
 
-icq-bot-ruby :diamonds:
+vkteams-bot-ruby :diamonds:
 ------------
-Ruby wrapper for [ICQ Bot API](https://icq.com/botapi/)
+Ruby wrapper for [VK Teams Bot API](https://myteam.mail.ru/botapi/)
 
 ----
 
 ## Installation 
 ```
-gem install icqbot
+gem install vkteamsbot
 ```
 
 ## Usage
 Simple echo bot:
 ```ruby
-require 'icqbot'
+require 'vkteamsbot'
 
-ICQ::Bot.new('token') do |bot|
+VKTeams::Bot.new('token') do |bot|
   bot.listen do |event|
     bot.send_msg("echo #{event.text}", event.chat_id)
   end

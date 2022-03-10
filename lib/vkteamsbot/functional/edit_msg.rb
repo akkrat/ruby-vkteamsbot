@@ -1,6 +1,6 @@
 require_relative '../bot.rb'
 
-module ICQ
+module VKTeams
 
   class Bot
     def edit_msg msg, msg_id, chat_id

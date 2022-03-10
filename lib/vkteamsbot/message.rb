@@ -1,6 +1,6 @@
-require_relative '../icqbot.rb'
+require_relative '../vkteamsbot.rb'
 
-module ICQ
+module VKTeams
 
   class Message
     attr_reader :text, :keyboard
@@ -11,7 +11,7 @@ module ICQ
     end
 
     def << btn
-      return @keyboard << btn if btn.is_a? ICQ::Button
+      return @keyboard << btn if btn.is_a? VKTeams::Button
       raise ArgumentError.new 'btn must be a Button'
     end
 

@@ -1,13 +1,13 @@
 require_relative '../../../bot.rb'
 
-module ICQ
+module VKTeams
 
   class Bot
-    def set_about chat_id, about
+    def set_rules chat_id, rules
       params = base_req chat_id
-      params['about'] = about
+      params['rules'] = rules
       JSON::load Requests.get(
-        URLS_API::SET_ABOUT, params: params).body
+        URLS_API::SET_RULES, params: params).body
     end
   end
 

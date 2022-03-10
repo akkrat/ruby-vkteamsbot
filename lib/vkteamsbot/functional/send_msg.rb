@@ -1,6 +1,6 @@
 require_relative '../bot.rb'
 
-module ICQ
+module VKTeams
 
   class Bot
     def send_msg msg, chat_id
@@ -11,7 +11,7 @@ module ICQ
     private
       def create_message_params msg, chat_id
         params = base_req chat_id
-        if msg.is_a? ICQ::Message
+        if msg.is_a? VKTeams::Message
           params['text'] = msg.text
           if msg.keyboard and msg.keyboard != []
             kb = msg.keyboard.map(&:to_h).map(&:to_json)

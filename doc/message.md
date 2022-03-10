@@ -1,7 +1,7 @@
 Message
 ---
 
-File: `lib/icqbot/message.rb`
+File: `lib/vkteamsbot/message.rb`
 
 ---
 
