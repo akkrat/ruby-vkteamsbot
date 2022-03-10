@@ -1,0 +1,4 @@
+.bundle
+test
+Gemfile.lock
+*.gem
