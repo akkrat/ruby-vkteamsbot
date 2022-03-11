@@ -1,18 +1,56 @@
-
-module URLS_API 
-  GET_EVENTS        = 'https://myteam.mail.ru/bot/v1/events/get'
-  SEND_MSG          = 'https://myteam.mail.ru/bot/v1/messages/sendText'
-  EDIT_MSG          = 'https://myteam.mail.ru/bot/v1/messages/editText'
-  DEL_MSG           = 'https://myteam.mail.ru/bot/v1/messages/deleteMessages'
-  GET_INFO          = 'https://myteam.mail.ru/bot/v1/chats/getInfo'
-  GET_ADMINS        = 'https://myteam.mail.ru/bot/v1/chats/getAdmins'
-  GET_MEMBRS        = 'https://myteam.mail.ru/bot/v1/chats/getMembers'
-  GET_BLOCKED_USERS = 'https://myteam.mail.ru/bot/v1/chats/getBlockedUsers'
-  SET_TITLE         = 'https://myteam.mail.ru/bot/v1/chats/setTitle'
-  SET_ABOUT         = 'https://myteam.mail.ru/bot/v1/chats/setAbout'
-  SET_RULES         = 'https://myteam.mail.ru/bot/v1/chats/setRules'
-  PIN_MSG           = 'https://myteam.mail.ru/bot/v1​/chats​/pinMessage'
-  UNPIN_MSG         = 'https://myteam.mail.ru/bot/v1​/chats​/unpinMessage'
-  BLOCK_USER        = 'https://myteam.mail.ru/bot/v1​/chats/blockUser'
-  UNBLOCK_USER      = 'https://myteam.mail.ru/bot/v1​/chats/unblockUser'
+module VKTeams
+module API 
+  @@base_url = "https://myteam.mail.ru/bot/v1"
+  def self.base_url
+    @@base_url
+  end
+  def self.base_url=(base_url)
+    @@base_url = base_url
+  end
+  def self.get_events
+    @@base_url + '/events/get'
+  end
+  def self.send_text
+    @@base_url + '/messages/sendText'
+  end
+  def self.edit_text
+    @@base_url + '/messages/editText'
+  end
+  def self.delete_messages
+    @@base_url + '/messages/deleteMessages'
+  end
+  def self.get_info
+    @@base_url + '/chats/getInfo'
+  end
+  def self.get_admins
+    @@base_url + '/chats/getAdmins'
+  end
+  def self.get_members
+    @@base_url + '/chats/getMembers'
+  end
+  def self.get_blocked_users
+    @@base_url + '/chats/getBlockedUsers'
+  end
+  def self.set_title
+    @@base_url + '/chats/setTitle'
+  end
+  def self.set_about
+    @@base_url + '/chats/setAbout'
+  end
+  def self.set_rules
+    @@base_url + '/chats/setRules'
+  end
+  def self.pin_message
+    @@base_url + '/chats/pinMessage'
+  end
+  def self.unpin_message
+    @@base_url + '/chats/unpinMessage'
+  end
+  def self.block_user
+    @@base_url + '/chats/blockUser'
+  end
+  def self.unblock_user
+    @@base_url + '/chats/unblockUser'
+  end
+end
 end

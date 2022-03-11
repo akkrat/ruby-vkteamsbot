@@ -36,7 +36,7 @@ module VKTeams
         'lastEventId': @last_event_id,
         'pollTime': @pool_time
       }
-      Requests.get(URLS_API::GET_EVENTS, params: params)
+      Requests.get(API.get_events, params: params)
     end
 
     def listen # event loop

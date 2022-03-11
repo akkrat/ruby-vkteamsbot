@@ -5,7 +5,7 @@ module VKTeams
   class Bot
     def send_msg msg, chat_id
       params = create_message_params msg, chat_id
-      JSON::load Requests.get(URLS_API::SEND_MSG, params: params).body
+      JSON::load Requests.get(API.send_text, params: params).body
     end
 
     private

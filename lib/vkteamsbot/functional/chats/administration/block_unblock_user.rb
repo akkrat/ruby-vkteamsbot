@@ -6,13 +6,13 @@ module VKTeams
     def block_user user_id, chat_id, del_last_msg=false
       params = base_req_for_block_unblock_user user_id, chat_id, del_last_msg
       JSON::load Requests.get(
-        URLS_API::BLOCK_USER, params: params).body
+        API.block_user, params: params).body
     end
 
     def unblock_user user_id, chat_id
       params = base_req_for_block_unblock_user user_id, chat_id
       JSON::load Requests.get(
-        URLS_API::UNBLOCK_USER, params: params).body
+        API.unblock_user, params: params).body
     end
 
     private

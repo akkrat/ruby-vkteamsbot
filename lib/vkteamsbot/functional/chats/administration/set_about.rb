@@ -7,7 +7,7 @@ module VKTeams
       params = base_req chat_id
       params['about'] = about
       JSON::load Requests.get(
-        URLS_API::SET_ABOUT, params: params).body
+        API.set_about, params: params).body
     end
   end
 

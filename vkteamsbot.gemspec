@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name          = "vkteambot"
   s.version       = VKTeams::VERSION
   s.authors       = ["akkrat"]
-  s.email         = ["akkrat.public@outlook.com"]
+  s.email         = ["akkrat-nocode@outlook.com"]
   s.license       = '0BSD'
 
   s.summary       = %q{Ruby wrapper for VK Teams Bot API.}
