@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary       = %q{Ruby wrapper for VK Teams Bot API.}
   s.description   = %q{This gem is a simple and minimalistic library for creating VK Teams bots.}
   s.homepage      = "https://github.com/akkrat/vkteamsbot"
-  s.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
+  # s.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   s.metadata["homepage_uri"] = s.homepage
 
