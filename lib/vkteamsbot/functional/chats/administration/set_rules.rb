@@ -6,7 +6,7 @@ module VKTeams
     def set_rules chat_id, rules
       params = base_req chat_id
       params['rules'] = rules
-      JSON::load Requests.get(
+      json_load Requests.get(
         API.set_rules, params: params).body
     end
   end

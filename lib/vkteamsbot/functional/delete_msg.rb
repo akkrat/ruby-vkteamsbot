@@ -6,8 +6,8 @@ module VKTeams
     def delete_msg msg_id, chat_id
       # FIXME: fix this trash
       params = base_req chat_id
-      r = "https://myteam.mail.ru/bot/v1/messages/deleteMessages?token=#{params[:token]}&chatId=#{chat_id}&msgId=#{msg_id}" # HACK: super trash
-      JSON::load Requests.get(r).body
+      r = API.delete_messages + "?token=#{params[:token]}&chatId=#{chat_id}&msgId=#{msg_id}" # HACK: super trash
+      json_load Requests.get(r).body
     end
   end
 

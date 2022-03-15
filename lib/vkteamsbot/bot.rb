@@ -20,13 +20,14 @@ module VKTeams
   class Bot
     attr_accessor :loop
 
-    def initialize token, pool_time=30
+    def initialize token, pool_time=30, verbose=false
       @token = token
       @pool_time = pool_time
       @last_event_id = 0
       @loop = true
       @handlers = {}
       @callback_handlers = {}
+      @verbose = verbose
       yield self if block_given?
     end
 
@@ -41,7 +42,7 @@ module VKTeams
 
     def listen # event loop
       while @loop
-        events = JSON::load(get_events.body)
+        events = json_load(get_events.body)
         if events and events['events'] and events['events'] != []
           last_event = events['events'].last
           @last_event_id = last_event['eventId']
@@ -71,6 +72,12 @@ module VKTeams
           'token': @token,
           'chatId': chat_id
         }
+      end
+
+      def json_load r
+        result = JSON::load r
+        puts result if @verbose
+        result
       end
   end
 

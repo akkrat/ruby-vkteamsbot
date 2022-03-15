@@ -7,7 +7,7 @@ module VKTeams
 
     def initialize obj, *keyboard
       @text = obj
-      @keyboard = keyboard
+      @keyboard = keyboard.compact
     end
 
     def << btn
