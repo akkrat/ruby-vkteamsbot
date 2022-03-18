@@ -3,7 +3,7 @@ require_relative '../bot.rb'
 module VKTeams
 
   class Bot
-    def send_msg msg, chat_id, parseMode = nil
+    def send_msg msg, chat_id, parseMode
       params = create_message_params msg, chat_id, parseMode
       json_load Requests.get(API.send_text, params: params).body
     end
