@@ -6,5 +6,5 @@ require_relative './vkteamsbot/user.rb'
 require_relative './vkteamsbot/message.rb'
 
 module VKTeams
-  VERSION = '0.2.0'
+  VERSION = '0.2.1'
 end
